@@ -45,16 +45,16 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
-				<h4>Preferred contact method</h4>
+					<h4>Preferred contact method</h4>
 					<div class="radio">
 						<label>
-						<input type="radio" name="pickupRadio" id="pickupRadio1" value="option1" checked>
+							<input type="radio" name="pickupRadio" id="pickupRadio1" value="option1" checked>
 							Email
 						</label>
 					</div>
 					<div class="radio">
 						<label>
-						<input type="radio" name="pickupRadio" id="pickupRadio1" value="option2">
+							<input type="radio" name="pickupRadio" id="pickupRadio1" value="option2">
 							Pick up at library
 						</label>
 					</div>
@@ -63,6 +63,18 @@
 				<h4>Specific Recommendation</h4>
 				<p>Are you looking for any specific reading recommendations? If so, please explain below.</p>
 				<textarea class="form-control" rows="3"></textarea>
+				<hr>
+				<h4>Reading History</h4>
+				<div class="col-md-6 col-md-offset-3">
+					<p>Please add up to 3 books that you have read and enjoyed (title only). <strong>Note: this is required for the automated recommendations feature.</strong></p>
+					<!-- TODO: FIX THIS LATER W/ ANGULAR -->
+					<div class="form-group">
+						<label for="inputBooks">Book Titles</label>
+						<input type="text" class="form-control" id="inputBook" placeholder="Book Title">
+						<input type="text" class="form-control" id="inputBook" placeholder="Book Title">
+						<input type="text" class="form-control" id="inputBook" placeholder="Book Title">
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
