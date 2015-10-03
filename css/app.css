@@ -1,0 +1,23 @@
+hr {
+	padding: 10px;
+	margin: 20px 0;
+	width: 90%;
+	color: #444;
+	height: 1px;
+}
+
+.checkbox-inline {
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+.container {
+	background-color: #fcfcfc;
+}
+
+.btn {
+	left: 45%;
+	right: auto;
+	position: relative;
+	margin-bottom: 30px;
+}
