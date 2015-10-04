@@ -52,6 +52,7 @@ app.get('/', function (request, response) {
 
 // handle the form logic
 app.post('/', function(request, response) {
+	//generate user info report
 	var body = '';
 	body += '\nName: ' + request.body.name;
 	body += '\nEmail: ' + request.body.email;
