@@ -1,4 +1,5 @@
-$(document).ready(function() {
+// None of this actually does anything yet.
+/*$(document).ready(function() {
 	$('#button').click(function(event) {
 		parseXML();
 	})
@@ -16,4 +17,4 @@ $(document).ready(function() {
 		}
 		
 	}
-});
+});*/
