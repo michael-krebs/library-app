@@ -52,6 +52,8 @@ app.get('/', function (request, response) {
 
 // handle the form logic
 app.post('/', function(request, response) {
+	response.sendFile(path.resolve(__dirname + '/index.html'));
+	
 	//generate user info report
 	var body = '';
 	body += '\nName: ' + request.body.name;
@@ -71,7 +73,6 @@ app.post('/', function(request, response) {
 	body += '\nDisliked Genres:' + request.body.dislikedGenres;
 	body += '\nLimitations: ' + request.body.limitRadios;
 	body += '\nAdditional Info: ' + request.body.additionalInfo;
-	response.send(body);
 	
 	// generate mail options for library and user emails
 	var mailOptionsLib = {
