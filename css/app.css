@@ -25,3 +25,7 @@ hr {
 h1 {
 	text-align: center;
 }
+
+body {
+	font-family: 'PT Serif', serif;
+}
