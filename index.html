@@ -18,30 +18,30 @@
 		</p></div>
 		<hr>
 		<div class="row">
-			<form>
+			<form id="libForm">
 				<h4>Contact Info (Required)</h4>
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="inputName">Name</label>
-						<input type="text" class="form-control" id="inputName" placeholder="Name">
+						<input type="text" class="form-control" id="name" placeholder="Name">
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="inputEmail">Email</label>
-						<input type="email" class="form-control" id="inputEmail" placeholder="Password">
+						<input type="email" class="form-control" id="email" placeholder="Password">
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="inputPhone">Phone number</label>
-						<input type="email" class="form-control" id="inputPhone" placeholder="#">
+						<input type="text" id="phone" class="form-control" placeholder="#">
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="inputLibraryCard">Library card number</label>
-						<input type="email" class="form-control" id="inputLibraryCard" placeholder="#">
+						<input type="text" id="libraryCard" class="form-control" placeholder="#">
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
@@ -62,192 +62,37 @@
 				<hr>
 				<h4>Specific Recommendation</h4>
 				<p>Are you looking for any specific reading recommendations? If so, please explain below.</p>
-				<textarea class="form-control" rows="3"></textarea>
+				<textarea class="form-control" id="specificRecommendation" rows="3"></textarea>
 				<hr>
 				<h4>Reading History</h4>
 				<div class="col-md-8 col-md-offset-2">
 					<p>Please add up to 3 books that you have read and enjoyed (title only). <strong>Note: this is required for the automated recommendations feature.</strong></p>
-					<!-- TODO: FIX THIS LATER W/ ANGULAR -->
 					<div class="form-group">
 						<label for="inputBooks">Book Titles</label>
-						<input type="text" class="form-control" id="inputBook" placeholder="Book Title">
-						<input type="text" class="form-control" id="inputBook" placeholder="Book Title">
-						<input type="text" class="form-control" id="inputBook" placeholder="Book Title">
+						<input type="text" class="form-control" id="inputBook1" placeholder="Book Title">
+						<input type="text" class="form-control" id="inputBook2" placeholder="Book Title">
+						<input type="text" class="form-control" id="inputBook3" placeholder="Book Title">
 					</div>
 				</div>
 				<div class="col-sm-12">
 					<p>Are there any authors you enjoy reading?</p>
-					<textarea class="form-control" rows="2"></textarea>
+					<textarea class="form-control" id="authors" rows="2"></textarea>
 					<p>What did you enjoy most about these books/authors?</p>
-					<textarea class="form-control" rows="2"></textarea>
+					<textarea class="form-control" id="enjoyed" rows="2"></textarea>
 					<p>Are there any authors and/or types of books you dislike? Why?</p>
-					<textarea class="form-control" rows="2"></textarea>
-					<p>What part of a book really draws you in? Check all that apply:</p>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-							Plot
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-							Setting
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-							Characters
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-							Language and style
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-							Time period
-						</label>
-					</div>
+					<textarea class="form-control" id="disliked" rows="2"></textarea>
 				</div>
 				<hr>
 				<h4>Characters</h4>
 				<p>Are there particular kinds of characters you would like to read about? For example, characters of a certain age, ethnicity, gender, or relationship status?</p>
-				<textarea class="form-control" rows="2"></textarea>
+				<textarea class="form-control" id="characters" rows="2"></textarea>
 				<hr>
 				<h4>Preferred Genres</h4>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Action/Adventure
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Biography/Memoir
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Chick Lit
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Classics
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Contemporary/General Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Fantasy
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Graphic Novels
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Historical Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Horror
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Humor
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Inspirational/Religious
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Literary Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Mystery
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Paranormal
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Romance
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Science Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Short Stories
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Suspense/Thriller
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Teen/Young Adult
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Urban Fiction/Street Lit
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Western
-				</label>
+				<p>Examples: action/adventure, biography/memoir, chick lit, classics, contemporary/general fiction, fantasy, graphic novels, historical fiction, horror, humor, inspirational/religious, literary fiction, mystery, paranormal, romance, science fiction, short stories, suspense/thriller, teen/young adult, urban fiction/street lit, Western, other...</p>
+				<textarea class="form-control" id="preferredGenres" rows="2"></textarea>
 				<hr>
 				<h4>Disliked Genres</h4>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Action/Adventure
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Biography/Memoir
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Chick Lit
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Classics
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Contemporary/General Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Fantasy
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Graphic Novels
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Historical Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Horror
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Humor
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Inspirational/Religious
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Literary Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Mystery
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Paranormal
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Romance
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Science Fiction
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Short Stories
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Suspense/Thriller
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox1" value="option1"> Teen/Young Adult
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox2" value="option2"> Urban Fiction/Street Lit
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" id="inlineCheckbox3" value="option3"> Western
-				</label>
+				<textarea class="form-control" id="dislikedGenres" rows="2"></textarea>
 				<hr>
 				<h4>Limitations</h4>
 				<p>Please let us know if there is content you would like to avoid. Everyone has their own individual preference regarding reading books with potentially explicit material.  How would you describe your threshold for tolerating the potential appearance of sex, violence, and/or explicit language in the novels we suggest?</p>
@@ -269,14 +114,16 @@
 				<hr>
 				<h4>Additional Info</h4>
 				<p>Please share anything else you would like us to consider about your reading preferences. (Interested in themes? A certain time period? Specific place? Your current tastes or preferences?)</p>
-				<textarea class="form-control" rows="2"></textarea>
+				<textarea class="form-control" id="additionalInfo" rows="2"></textarea>
 				<hr>
-				<button type="button" class="btn btn-primary btn-lg align-center">Submit</button>
+				<button type="button" id="button" class="btn btn-primary btn-lg">Submit</button>
 				<p>Thank you! We will have your personalized list ready within two weeks. If you have questions, please contact: seymourlibrary (at) seymourlib.org</p>
 			</form>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
