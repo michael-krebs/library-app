@@ -52,27 +52,43 @@ app.get('/', function (request, response) {
 
 // handle the form logic
 app.post('/', function(request, response) {
-	response.send(request.body);
-	/*
+	var body = '';
+	body += '\nName: ' + request.body.name;
+	body += '\nEmail: ' + request.body.email;
+	body += '\nPhone No.: ' + request.body.phone;
+	body += '\nLibrary Card No.: ' + request.body.libraryCard;
+	body += '\nContact Method: ' + request.body.pickupRadio;
+	body += '\nSpecific Recommendations: ' + request.body.specificRecommendation;
+	body += '\nEnjoyed Books:'
+				+ '\n\t' + request.body.inputBook1
+				+ '\n\t' + request.body.inputBook2
+				+ '\n\t' + request.body.inputBook3;
+	body += '\nFavorite Authors: ' + request.body.authors;
+	body += '\nReasons Enjoyed: ' + request.body.enjoyed;
+	body += '\nDisliked Authors: ' + request.body.disliked;
+	body += '\nPreferred Genres' + request.body.preferredGenres;
+	body += '\nDisliked Genres:' + request.body.dislikedGenres;
+	body += '\nLimitations: ' + request.body.limitRadios;
+	body += '\nAdditional Info: ' + request.body.additionalInfo;
+	response.send(body);
+	
 	// generate mail options for library and user emails
 	var mailOptionsLib = {
 		from:    'Library App Service <LibAppService@gmail.com>',
 		to:      'LibAppService@gmail.com',
 		subject: 'User Book List Request',
-		text:    request.body.data
+		text:    body
 	};
-	
 	var mailOptionsUser = {
 		from:    'Library App Service <LibAppService@gmail.com>',
 		to:      'LibAppService@gmail.com',
 		subject: 'Your Generated Book List',
-		html:    '<b><strong>You will get a list of books recommended by the API.</strong></b>'
+		text:    body
 	};
 
 	// send generated emails
 	mail(emailer, mailOptionsLib);
 	mail(emailer, mailOptionsUser);
-	*/
 });
 
 // start the server
