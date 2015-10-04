@@ -56,23 +56,25 @@ app.post('/', function(request, response) {
 	
 	//generate user info report
 	var body = '';
-	body += '\nName: ' + request.body.name;
-	body += '\nEmail: ' + request.body.email;
-	body += '\nPhone No.: ' + request.body.phone;
-	body += '\nLibrary Card No.: ' + request.body.libraryCard;
-	body += '\nContact Method: ' + request.body.pickupRadio;
-	body += '\nSpecific Recommendations: ' + request.body.specificRecommendation;
+	body += 'Submitted User Info\n';
+	body += '\nName:\t' + request.body.name;
+	body += '\nEmail:\t' + request.body.email;
+	body += '\nPhone No.:\t' + request.body.phone;
+	body += '\nLibrary Card No.:\t' + request.body.libraryCard;
+	body += '\nContact Method:\t' + request.body.pickupRadio;
+	body += '\nSpecific Recommendations:\t' + request.body.specificRecommendation;
 	body += '\nEnjoyed Books:'
 				+ '\n\t' + request.body.inputBook1
 				+ '\n\t' + request.body.inputBook2
 				+ '\n\t' + request.body.inputBook3;
-	body += '\nFavorite Authors: ' + request.body.authors;
-	body += '\nReasons Enjoyed: ' + request.body.enjoyed;
-	body += '\nDisliked Authors: ' + request.body.disliked;
-	body += '\nPreferred Genres' + request.body.preferredGenres;
-	body += '\nDisliked Genres:' + request.body.dislikedGenres;
-	body += '\nLimitations: ' + request.body.limitRadios;
-	body += '\nAdditional Info: ' + request.body.additionalInfo;
+	body += '\nFavorite Authors:\t' + request.body.authors;
+	body += '\nReasons Enjoyed:\t' + request.body.enjoyed;
+	body += '\nDisliked Authors:\t' + request.body.disliked;
+	body += '\nCharacter Types:\t' + request.body.characters;
+	body += '\nPreferred Genres:\t' + request.body.preferredGenres;
+	body += '\nDisliked Genres:\t' + request.body.dislikedGenres;
+	body += '\nLimitations:\t' + request.body.limitRadios;
+	body += '\nAdditional Info:\t' + request.body.additionalInfo;
 	
 	// generate mail options for library and user emails
 	var mailOptionsLib = {
@@ -81,16 +83,17 @@ app.post('/', function(request, response) {
 		subject: 'User Book List Request',
 		text:    body
 	};
+	/*
 	var mailOptionsUser = {
 		from:    'Library App Service <LibAppService@gmail.com>',
-		to:      'LibAppService@gmail.com',
+		to:      request.body.email,
 		subject: 'Your Generated Book List',
 		text:    body
 	};
-
+	*/
 	// send generated emails
 	mail(emailer, mailOptionsLib);
-	mail(emailer, mailOptionsUser);
+	//mail(emailer, mailOptionsUser);
 });
 
 // start the server
