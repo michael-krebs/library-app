@@ -52,7 +52,7 @@ app.get('/', function (request, response) {
 
 // handle the form logic
 app.post('/', function(request, response) {
-	response.sendFile(path.resolve(__dirname + '/index.html'));
+	response.sendFile(path.resolve(__dirname + '/success.html'));
 	
 	//generate user info report
 	var body = '';
