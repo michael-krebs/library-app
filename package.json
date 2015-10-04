@@ -1,0 +1,25 @@
+{
+  "name": "library-app",
+  "version": "1.0.0",
+  "description": "Book Recommendation Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-krebs/library-app.git"
+  },
+  "keywords": ["Books", "Library"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michael-krebs/library-app/issues"
+  },
+  "homepage": "https://github.com/michael-krebs/library-app#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "nodemailer": "^1.5.0"
+  }
+}
