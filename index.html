@@ -29,7 +29,7 @@
 				<div class="col-lg-6 col-sm-12">
 					<div class="form-group">
 						<label for="email">Email</label>
-						<input type="email" class="form-control" name="email" id="email" placeholder="Password">
+						<input type="email" class="form-control" name="email" id="email" placeholder="Email">
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
@@ -60,18 +60,20 @@
 					</div>
 				</div>
 				<hr>
-				<h4>Specific Recommendation</h4>
+				<div class="col-sm-12">
+					<h4>Specific Recommendation</h4>
 				<p>Are you looking for any specific reading recommendations? If so, please explain below.</p>
-				<textarea class="form-control" id="specificRecommendation" name="specificRecommendation" rows="3"></textarea>
+				<textarea class="form-control" id="specificRecommendation" name="specificRecommendation" rows="3"></textarea>	
+				</div>
+				
 				<hr>
 				<h4>Reading History</h4>
-				<div class="col-md-8 col-md-offset-2">
-					<p>Please add up to 3 books that you have read and enjoyed (title only). <strong>Note: this is required for the automated recommendations feature.</strong></p>
+				<div class="col-md-8">
+					<p>Please add up to 3 books that you have read and enjoyed.</p>
 					<div class="form-group">
-						<label for="inputBooks">Book Titles</label>
-						<input type="text" class="form-control" id="inputBook1" name="inputBook1" placeholder="Book Title">
-						<input type="text" class="form-control" id="inputBook2" name="inputBook2" placeholder="Book Title">
-						<input type="text" class="form-control" id="inputBook3" name="inputBook3" placeholder="Book Title">
+						<input type="text" class="form-control book" id="inputBook1" name="inputBook1" placeholder="Book Title">
+						<input type="text" class="form-control book" id="inputBook2" name="inputBook2" placeholder="Book Title">
+						<input type="text" class="form-control book" id="inputBook3" name="inputBook3" placeholder="Book Title">
 					</div>
 				</div>
 				<div class="col-sm-12">
