@@ -13,6 +13,7 @@ Utilizes:	Express 4.0
 var express = require('express');
 var nodeMailer = require('nodemailer');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 // email transporter via SMTP
 var emailer = nodeMailer.createTransport({
@@ -37,19 +38,22 @@ function mail(transporter, mailOptions) {
 // express app
 var app = express();
 
+// set up path root (parent of server folder)
+app.use(express.static(__dirname + '/../'));
+
 // set up app to acquire POST data
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // serve the form
 app.get('/', function (request, response) {
-	response.send('<form method="POST" action="/"><input type="text" name="data"><input type="submit" value="Submit"></form>');
+	response.sendFile(path.resolve(__dirname + '/../index.html'));
 });
 
 // handle the form logic
 app.post('/', function(request, response) {
-	response.send('You entered: ' + request.body.data);
-	
+	response.send(request.body);
+	/*
 	// generate mail options for library and user emails
 	var mailOptionsLib = {
 		from:    'Library App Service <LibAppService@gmail.com>',
@@ -68,6 +72,7 @@ app.post('/', function(request, response) {
 	// send generated emails
 	mail(emailer, mailOptionsLib);
 	mail(emailer, mailOptionsUser);
+	*/
 });
 
 // start the server
